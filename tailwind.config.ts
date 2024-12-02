@@ -1,24 +1,31 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-	content: [
+    darkMode: ["class"],
+    content: [
 		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
-		extend: {
-			fontFamily: {
-				inter: ["var(--font-inter)"],
-			},
-			colors: {
-				background: "rgb(var(--background))",
-				foreground: "rgb(var(--foreground))",
-				muted: "rgb(var(--muted))",
-				accent: "rgb(var(--accent))",
-			},
-		},
-	},
-	plugins: [],
+    	extend: {
+    		fontFamily: {
+    			inter: ["var(--font-inter)"]
+    		},
+    		colors: {
+    			background: '#111827',
+    			additional: '#2966F2',
+    			muted: '#864F5A',
+    			accent: '#EAB30B',
+    			primary: '#020617'
+    		},
+    		borderRadius: {
+    			lg: 'var(--radius)',
+    			md: 'calc(var(--radius) - 2px)',
+    			sm: 'calc(var(--radius) - 4px)'
+    		}
+    	}
+    },
+	plugins: [require("tailwindcss-animate")],
 };
 export default config;
