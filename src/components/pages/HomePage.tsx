@@ -1,8 +1,12 @@
-
 const HomePage = () => {
   return (
-    <div className=" h-screen bg-foreground flex items-center justify-center" id="#">HomePage</div>
-  )
-}
+    <div
+      className=" h-screen bg-foreground flex items-center justify-center"
+      id="#"
+    >
+      Hello this is my homepage
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;
