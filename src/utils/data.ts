@@ -33,3 +33,26 @@ export const sliders = [
     image: image4,
   },
 ];
+
+export const faqData = [
+  {
+    question: "How can I create an event",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et laborum velit, nostrum nisiquisquam porro maxime totam mollitia enim illum earum? Eaque, amet. Aliquid delectus provident magni incidunt nemo voluptates!",
+  },
+  {
+    question: "How can I create an event",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et laborum velit, nostrum nisiquisquam porro maxime totam mollitia enim illum earum? Eaque, amet. Aliquid delectus provident magni incidunt nemo voluptates!",
+  },
+  {
+    question: "How can I create an event",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et laborum velit, nostrum nisiquisquam porro maxime totam mollitia enim illum earum? Eaque, amet. Aliquid delectus provident magni incidunt nemo voluptates!",
+  },
+  {
+    question: "How can I create an event",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et laborum velit, nostrum nisiquisquam porro maxime totam mollitia enim illum earum? Eaque, amet. Aliquid delectus provident magni incidunt nemo voluptates!",
+  },
+];

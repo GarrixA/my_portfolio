@@ -1,13 +1,15 @@
 "use client";
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import AboutPage from "@/components/pages/AboutPage/AboutPage";
-import BlogsPage from "@/components/pages/BlogsPage";
-import ContactsPage from "@/components/pages/ContactsPage";
+import BlogsPage from "@/components/pages/Blogs/BlogsPage";
+import ContactsPage from "@/components/pages/Contacts/ContactsPage";
 import HomePage from "@/components/pages/HomePage/HomePage";
 import PortfolioPage from "@/components/pages/Portfolio/PortfolioPage";
+import Faq from "@/components/pages/QA/Faq";
 import SkillsPage from "@/components/pages/SkillsPage/SkillsPage";
-import TestimoniesPage from "@/components/pages/TestimoniesPage";
 import { useEffect, useState } from "react";
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -49,8 +51,8 @@ export default function Home() {
       <section id="blogs">
         <BlogsPage />
       </section>
-      <section id="testimonies">
-        <TestimoniesPage />
+      <section id="faq">
+        <Faq />
       </section>
       <section id="contacts">
         <ContactsPage />
