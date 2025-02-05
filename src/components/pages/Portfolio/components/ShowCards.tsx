@@ -13,7 +13,7 @@ const ShowCards = ({ image, title }: ShowCardsProps) => {
           {title}
         </h1>
         <div className="w-full h-full relative">
-          <div className="h-full w-full absolute inset-0 bg-black/50"></div>
+          <div className="h-full w-full absolute inset-0 bg-black/20"></div>
           <Image
             width={168}
             height={250}
