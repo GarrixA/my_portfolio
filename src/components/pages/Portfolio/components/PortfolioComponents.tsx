@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import { sliders } from "@/utils/data";
 import { motion } from "framer-motion";
 import { imageVariants, textVariants, buttonVariants } from "@/utils/variants";
+import ShowCards from "./ShowCards";
 
 const PortfolioComponents = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,9 +49,9 @@ const PortfolioComponents = () => {
   }, [currentIndex]);
 
   return (
-    <div className="p-8 bg-white rounded-md relative overflow-hidden">
+    <div className="p-8 bg-white rounded-md relative overflow-hidden w-full">
       <div className="w-full h-full relative">
-        <div className="h-[25rem] w-[40rem]">
+        <div className="h-[70vh] w-full">
           <motion.div
             key={currentIndex}
             variants={imageVariants}
@@ -105,6 +106,13 @@ const PortfolioComponents = () => {
             transition={{ duration: 0.3 }}
           />
         </div>
+      </div>
+
+      <div className="absolute z-30 bottom-10 right-10">
+        <ShowCards
+          image={sliders[(currentIndex + 1) % sliders.length].image.src}
+          title={sliders[(currentIndex + 1) % sliders.length].title}
+        />
       </div>
 
       <div className="absolute bottom-20 left-32 flex items-center gap-4">
