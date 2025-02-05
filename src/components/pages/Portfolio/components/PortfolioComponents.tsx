@@ -49,9 +49,9 @@ const PortfolioComponents = () => {
   }, [currentIndex]);
 
   return (
-    <div className="p-8 bg-white rounded-md relative overflow-hidden w-full">
+    <div className="p-2 lg:p-8 bg-white rounded-md relative overflow-hidden w-full">
       <div className="w-full h-full relative">
-        <div className="h-[70vh] w-full">
+        <div className="h-96 lg:h-[70vh] w-full">
           <motion.div
             key={currentIndex}
             variants={imageVariants}
@@ -69,24 +69,28 @@ const PortfolioComponents = () => {
             />
           </motion.div>
         </div>
-        <div className="w-full h-full absolute bg-black/50 top-0"></div>
+        <div className="w-full h-full absolute bg-black/30 top-0"></div>
         <motion.div
           key={currentIndex}
           variants={textVariants}
           initial="initial"
           animate="animate"
           exit="exit"
-          className="absolute top-20 left-20 z-20 text-white"
+          className="absolute top-4 lg:top-20 left-4 lg:left-20 z-20 text-white w-3/5"
         >
-          <h1 className="font-bold text-2xl">{sliders[currentIndex].title}</h1>
-          <p className="font-bold">{sliders[currentIndex].description}</p>
+          <h1 className="font-bold lg:text-2xl">
+            {sliders[currentIndex].title}
+          </h1>
+          <p className="font-bold text-sm lg:text-base">
+            {sliders[currentIndex].description}
+          </p>
           <Link href={sliders[currentIndex].link}>
             <motion.button
               variants={buttonVariants}
               initial="initial"
               animate="animate"
               exit="exit"
-              className="bg-accent px-3 py-2 font-bold rounded-lg mt-2"
+              className="bg-accent px-3 py-1 lg:py-2 font-bold rounded-sm text-sm lg:text-base mt-2"
             >
               See demo
             </motion.button>
@@ -108,14 +112,14 @@ const PortfolioComponents = () => {
         </div>
       </div>
 
-      <div className="absolute z-30 bottom-10 right-10">
+      <div className="absolute z-30 bottom-3 lg:bottom-10 right-3 lg:right-10">
         <ShowCards
           image={sliders[(currentIndex + 1) % sliders.length].image.src}
           title={sliders[(currentIndex + 1) % sliders.length].title}
         />
       </div>
 
-      <div className="absolute bottom-20 left-32 flex items-center gap-4">
+      <div className="absolute bottom-5 lg:bottom-20 left-5 lg:left-32 flex items-center gap-4">
         <motion.button
           variants={buttonVariants}
           initial="initial"
@@ -123,7 +127,7 @@ const PortfolioComponents = () => {
           exit="exit"
           onClick={handlePrev}
           disabled={progress / 100 !== 0}
-          className={`font-bold px-4 py-2 rounded-md ${
+          className={`font-bold px-4 py-1 lg:py-2 text-sm lg:text-base rounded-sm ${
             progress / 100 !== 0 ? "bg-gray-400" : "bg-accent"
           }`}
         >
@@ -137,7 +141,7 @@ const PortfolioComponents = () => {
           exit="exit"
           onClick={handleNext}
           disabled={progress / 100 != 0}
-          className={`font-bold px-4 py-2 rounded-md ${
+          className={`font-bold px-4 py-1 lg:py-2 text-sm lg:text-base rounded-sm ${
             progress / 100 !== 0 ? "bg-gray-400" : "bg-accent"
           }`}
         >

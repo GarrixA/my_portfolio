@@ -35,7 +35,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex flex-col text-white">
+    <main className="flex flex-col text-white min-w-72">
       <section id="home">
         <HomePage />
       </section>

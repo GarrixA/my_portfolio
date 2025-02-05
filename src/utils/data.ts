@@ -56,3 +56,13 @@ export const faqData = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et laborum velit, nostrum nisiquisquam porro maxime totam mollitia enim illum earum? Eaque, amet. Aliquid delectus provident magni incidunt nemo voluptates!",
   },
 ];
+
+export const navs = [
+  { name: "Home", link: "#home" },
+  { name: "About", link: "#about" },
+  { name: "Skills", link: "#skills" },
+  { name: "Portfolio", link: "#portfolio" },
+  { name: "Blogs", link: "#blogs" },
+  { name: "FAQs", link: "#faq" },
+  { name: "Contacts", link: "#contacts" },
+];

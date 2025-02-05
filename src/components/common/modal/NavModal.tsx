@@ -1,23 +1,29 @@
-"use client";
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
-import { useState, useEffect } from "react";
-import clsx from "clsx";
-import Image from "next/image";
-import Logo from "../../../public/Logo.svg";
-import Link from "next/link";
-import { LuMenu } from "react-icons/lu";
 import { navs } from "@/utils/data";
-import NavModal from "./modal/NavModal";
-import { AnimatePresence } from "framer-motion";
+import clsx from "clsx";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { IoMdClose } from "react-icons/io";
 
-const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+const modalVariants = {
+  hidden: { x: "100%", opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.4, ease: "easeOut" } },
+  exit: {
+    x: "100%",
+    opacity: 0,
+    transition: { duration: 0.3, ease: "easeIn" },
+  },
+};
+
+interface ModalProps {
+  toggleModal: () => void;
+}
+
+const NavModal = ({ toggleModal }: ModalProps) => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
-  const [modal, setModal] = useState(false);
-
-  const toggleModal = () => {
-    setModal(!modal);
-  };
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -105,32 +111,20 @@ const Navbar = () => {
   };
 
   return (
-    <div
-      className={`h-16 sm:h-20 2xl:h-24 w-full bg-background flex items-center justify-between px-[10%] m-auto fixed z-50  transition-all duration-1000 ${
-        isScrolled ? "bg-muted" : ""
-      }`}
-    >
-      <div>
-        <Image
-          width={10}
-          height={10}
-          alt="logo"
-          src={Logo}
-          className="w-full h-full"
-        />
-      </div>
-      <button
-        className="flex lg:hidden text-white text-2xl"
-        onClick={() => toggleModal()}
+    <div className="fixed w-full bg-black/20 inset-0 h-screen flex flex-col items-end lg:hidden">
+      <motion.div
+        className="lg:hidden gap-4 text-background font-bold flex flex-col bg-white w-3/4 sm:w-3/6 md:w-2/5 h-full relative mt-0 p-12"
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        variants={modalVariants}
       >
-        <LuMenu />
-      </button>
-
-      <AnimatePresence>
-        {modal && <NavModal toggleModal={toggleModal} />}
-      </AnimatePresence>
-
-      <div className="lg:flex items-center gap-4 text-white font-bold hidden">
+        <button
+          className="flex lg:hidden text-background text-4xl hover:text-red-500 absolute top-5 right-5"
+          onClick={toggleModal}
+        >
+          <IoMdClose />
+        </button>
         {navs.map((nav, idx) => (
           <Link key={idx} href={nav.link}>
             <span
@@ -138,15 +132,18 @@ const Navbar = () => {
                 "cursor-pointer",
                 activeSection === nav.link.slice(1) ? "text-accent" : ""
               )}
-              onClick={() => scrollTo(nav.link)}
+              onClick={() => {
+                scrollTo(nav.link);
+                toggleModal();
+              }}
             >
               {nav.name}
             </span>
           </Link>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
 
-export default Navbar;
+export default NavModal;
