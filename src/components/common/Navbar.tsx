@@ -42,21 +42,25 @@ const Navbar = () => {
 
   /**
    * Calculate the speed of the scroll behavior
-   * @param targetElement 
-   * @returns 
+   * @param targetElement
+   * @returns
    */
   const calculateScrollSpeed = (targetElement: HTMLElement) => {
-    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const sectionPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+    const totalHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const sectionPosition =
+      targetElement.getBoundingClientRect().top + window.scrollY;
     const distanceFromBottom = totalHeight - sectionPosition;
-    
-    return distanceFromBottom > 0 ? 250 + (distanceFromBottom / totalHeight) * 500 : 500;
+
+    return distanceFromBottom > 0
+      ? 250 + (distanceFromBottom / totalHeight) * 500
+      : 500;
   };
 
   /**
    * Scroll function targeting element
-   * @param targetElement 
-   * @param duration 
+   * @param targetElement
+   * @param duration
    */
   const customScrollTo = (targetElement: HTMLElement, duration: number) => {
     const start = window.scrollY;
@@ -68,10 +72,10 @@ const Navbar = () => {
       const timeElapsed = currentTime - startTime;
       const progress = Math.min(timeElapsed / duration, 1);
 
-      window.scrollTo(0, start + distance * progress); 
+      window.scrollTo(0, start + distance * progress);
 
       if (progress < 1) {
-        requestAnimationFrame(animateScroll); 
+        requestAnimationFrame(animateScroll);
       }
     };
 
@@ -79,15 +83,15 @@ const Navbar = () => {
   };
 
   /**
-   * Function that targets an element 
-   * To scroll to 
-   * @param link 
+   * Function that targets an element
+   * To scroll to
+   * @param link
    */
   const scrollTo = (link: string) => {
     const targetElement = document.querySelector(link) as HTMLElement;
     if (targetElement) {
       const scrollSpeed = calculateScrollSpeed(targetElement);
-      customScrollTo(targetElement, scrollSpeed); 
+      customScrollTo(targetElement, scrollSpeed);
     }
   };
 
@@ -97,28 +101,34 @@ const Navbar = () => {
     { name: "Skills", link: "#skills" },
     { name: "Portfolio", link: "#portfolio" },
     { name: "Blogs", link: "#blogs" },
-    { name: "Testimonies", link: "#testimonies" },
+    { name: "FAQs", link: "#faq" },
     { name: "Contacts", link: "#contacts" },
   ];
 
   return (
     <div
-      className={`h-24 w-full bg-background flex items-center justify-between px-[10%] m-auto fixed transition-all duration-1000 ${
+      className={`h-20 2xl:h-24 w-full bg-background flex items-center justify-between px-[10%] m-auto fixed z-50  transition-all duration-1000 ${
         isScrolled ? "bg-muted" : ""
       }`}
     >
       <div>
-        <Image width={10} height={10} alt="logo" src={Logo} className="w-full h-full" />
+        <Image
+          width={10}
+          height={10}
+          alt="logo"
+          src={Logo}
+          className="w-full h-full"
+        />
       </div>
       <div className="flex items-center gap-4 text-white font-bold">
         {navs.map((nav, idx) => (
           <Link key={idx} href={nav.link}>
             <span
               className={clsx(
-                "cursor-pointer", 
+                "cursor-pointer",
                 activeSection === nav.link.slice(1) ? "text-accent" : ""
               )}
-              onClick={() => scrollTo(nav.link)} 
+              onClick={() => scrollTo(nav.link)}
             >
               {nav.name}
             </span>
