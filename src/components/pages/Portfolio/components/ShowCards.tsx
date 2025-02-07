@@ -8,7 +8,7 @@ interface ShowCardsProps {
 const ShowCards = ({ image, title }: ShowCardsProps) => {
   return (
     <div className="rounded-lg overflow-hidden">
-      <div className="bg-red-500 h-64 w-40 relative">
+      <div className="h-72 w-52 relative">
         <h1 className="absolute top-0 left-0 z-10 bg-muted w-full text-base font-bold p-2">
           {title}
         </h1>

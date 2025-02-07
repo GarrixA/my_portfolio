@@ -24,7 +24,7 @@ const SkillsComponent = () => {
         <h1 className="lg:text-center text-3xl lg:text-5xl font-bold">
           My <b className="text-accent/90">Technical</b> Skills
         </h1>
-        <p className="text-base">
+        <p className="text-base lg:text-xl my-2 2xl:text-2xl">
           My goal is to build a modern web application utilizing HTML, CSS, and
           modern front-end frameworks and libraries for interactive user
           experiences, Tailwind CSS for efficient styling, MongoDB and
@@ -36,7 +36,7 @@ const SkillsComponent = () => {
       <div className="grid md:grid-cols-2 gap-2 gap-x-10">
         {skills.map((skill, idx) => (
           <div key={idx}>
-            <div className="flex items-center relative">
+            <div className="flex items-center 2xl:text-xl relative">
               <h1>{skill.name}</h1>
               <h1
                 className="absolute"

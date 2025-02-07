@@ -42,7 +42,7 @@ const Footer = () => {
 
         <div className="flex flex-col items-center lg:justify-center flex-1 gap-4">
           <h1 className=" w-full text-left text-xl">Follow me on</h1>
-          <div className="flex items-center lg:justify-center gap-2 w-full">
+          <div className="flex  gap-2 w-full">
             <Link
               href="http://www.instagram.com/aphrodisgarrix/"
               target="_blank"

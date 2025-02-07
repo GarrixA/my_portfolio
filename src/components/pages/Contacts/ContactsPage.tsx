@@ -11,7 +11,11 @@ const ContactsPage = () => {
       location: "aphrodis garrix",
       link: "https://www.instagram.com/aphrodisgarrix/",
     },
-    { name: "Twitter", location: "aphrodis garrix", link: "#" },
+    {
+      name: "Twitter",
+      location: "aphrodis garrix",
+      link: "http://twitter.com/AphrodisGarrix",
+    },
     {
       name: "LinkedIn",
       location: "Aphrodis Uwineza",
@@ -19,7 +23,10 @@ const ContactsPage = () => {
     },
   ];
   return (
-    <div className=" bg-foreground flex flex-col gap-4 lg:gap-8 px-[7%] lg:px-[10%] mx-auto py-10">
+    <div
+      className=" bg-foreground flex flex-col gap-4 lg:gap-8 px-[7%] lg:px-[10%] mx-auto py-10"
+      id="contacts"
+    >
       <h1 className="text-4xl lg:text-5xl font-bold text-center">
         Let&apos;s <b className="text-accent">Connect</b>
       </h1>

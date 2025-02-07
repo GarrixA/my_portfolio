@@ -21,12 +21,12 @@ const AboutPageComponent = () => {
           About <b className="text-accent">Me.</b>
         </div>
         <div>
-          <p className="text-base lg:text-lg">
+          <p className="text-base lg:text-lg 2xl:text-2xl">
             I thrive on turning ideas into interactive and user-friendly
             experiences. My journey in the world of web development has been an
             exciting adventure of constant learning and creating.
           </p>
-          <p className="text-lg mt-2">
+          <p className="text-lg 2xl:text-2xl mt-2">
             From crafting responsive layouts to implementing state-of-the-art
             features, I enjoy the challenges that come with building modern and
             dynamic web applications
