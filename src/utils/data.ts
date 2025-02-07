@@ -1,59 +1,74 @@
-import image1 from "@/public/Dashboard.png";
-import image2 from "@/public/timer.png";
-import image3 from "@/public/smpark.png";
-import image4 from "@/public/abicar.png";
+import image1 from "@/public/Posinove.png";
+import image2 from "@/public/renthub.png";
+import image3 from "@/public/trendsaf.png";
+import image4 from "@/public/e-commerce.png";
+import image5 from "@/public/basefood.png";
 
 export const sliders = [
   {
-    title: "Smart",
+    title: "Posinnove",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eligendi ea asperiores",
-    link: "#portfolio",
+      "A project-based learning platform for front-end and back-end development, built using Node.js, Next.js, Tailwind CSS, and PostgreSQL.",
+    link: "https://www.posinnove.com/",
     image: image1,
   },
   {
-    title: "Tailwind",
+    title: "Renthub",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eligendi ea asperiores",
-    link: "#portfolio",
+      "Renthub is a platform that provides rental housing solutions in Rwanda, starting its operations in Kigali. It is built using Node.js, React, TypeScript, Tailwind CSS Sequelize, and PostgreSQL to ensure a scalable and efficient experience",
+    link: "https://renthub-fe-copy.vercel.app/",
     image: image2,
   },
   {
-    title: "React",
+    title: "TrendsAf",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eligendi ea asperiores",
-    link: "#portfolio",
+      "Modern Data Infrastructure For Emerging Economies, It is built using React and Tailwind CSS",
+    link: "https://trendsaf.co/",
     image: image3,
   },
   {
-    title: "Next",
+    title: "e-commerce",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eligendi ea asperiores",
-    link: "#portfolio",
+      "An E-commerce platform. It is built using Node.js, Sequelize ORM, Typescript, React.js, Tailwind CSS",
+    link: "https://eagles-ec-fe-staging.vercel.app/",
     image: image4,
+  },
+  {
+    title: "baseFood",
+    description:
+      "Agri-trade with real-time data from farmgate prices to shipping. It is built using React, Tailwind CSS, MUI and Flask",
+    link: "#portfolio",
+    image: image5,
   },
 ];
 
 export const faqData = [
   {
-    question: "How can I create an event",
+    question: "What technologies do you use for full-stack development?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et laborum velit, nostrum nisiquisquam porro maxime totam mollitia enim illum earum? Eaque, amet. Aliquid delectus provident magni incidunt nemo voluptates!",
+      "I work with modern full-stack technologies like React, Next.js, Node.js, Express, and MongoDB for the back-end, and PostgreSQL for relational data. I also use REST APIs, GraphQL, and other tools like Docker for containerization.",
   },
   {
-    question: "How can I create an event",
+    question: "How do you ensure the security of the applications you build?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et laborum velit, nostrum nisiquisquam porro maxime totam mollitia enim illum earum? Eaque, amet. Aliquid delectus provident magni incidunt nemo voluptates!",
+      "I prioritize security by implementing HTTPS, user authentication with JWT or OAuth, role-based access control, and preventing common vulnerabilities like SQL injection, XSS, and CSRF attacks. I also regularly update dependencies to patch security flaws.",
   },
   {
-    question: "How can I create an event",
+    question:
+      "How do you handle both front-end and back-end performance optimization?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et laborum velit, nostrum nisiquisquam porro maxime totam mollitia enim illum earum? Eaque, amet. Aliquid delectus provident magni incidunt nemo voluptates!",
+      "For front-end, I use techniques like lazy loading, code splitting, and image optimization. On the back-end, I optimize database queries, use caching mechanisms, and apply load balancing to ensure high performance and scalability.",
   },
   {
-    question: "How can I create an event",
+    question:
+      "Can you deploy and manage full-stack applications in production?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et laborum velit, nostrum nisiquisquam porro maxime totam mollitia enim illum earum? Eaque, amet. Aliquid delectus provident magni incidunt nemo voluptates!",
+      "Yes, I can deploy full-stack applications using platforms like Heroku, AWS, or Vercel. I also manage CI/CD pipelines, monitor the applications, and ensure they run smoothly with auto-scaling and load balancing when needed.",
+  },
+  {
+    question: "What is your approach to integrating and managing databases?",
+    answer:
+      "I work with both SQL and NoSQL databases depending on project needs. For structured data, I use SQL databases like PostgreSQL or MySQL, while for unstructured data, I use NoSQL databases like MongoDB. I ensure proper integration between databases and the server-side logic using ORMs like Sequelize or Mongoose.",
   },
 ];
 
