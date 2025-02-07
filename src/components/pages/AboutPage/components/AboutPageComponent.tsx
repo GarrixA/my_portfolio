@@ -3,10 +3,10 @@ import image2 from "@/public/image2.jpg";
 
 const AboutPageComponent = () => {
   return (
-    <div className="flex items-center gap-24">
-      <div className="relative">
-        <div className="h-96 w-96 border-[14px] rounded-lg border-accent"></div>
-        <div className="w-96 h-96 absolute -top-8 -right-8 rounded-lg overflow-hidden">
+    <div className="flex items-center sm:flex-row flex-col-reverse gap-12 lg:gap-24 lg:mt-0 py-10 lg:py-0">
+      <div className="relative w-full">
+        <div className="h-96 w-full sm:w-80 lg:w-96 border-[8px] lg:border-[14px] rounded-lg border-accent"></div>
+        <div className="w-full sm:w-80  lg:w-96 h-96 absolute -top-4 lg:-top-8 left-4 lg:-right-8 rounded-lg overflow-hidden">
           <Image
             width={384}
             height={384}
@@ -17,23 +17,23 @@ const AboutPageComponent = () => {
         </div>
       </div>
       <div className="flex flex-col gap-4">
-        <div className="text-5xl font-extrabold">
+        <div className="text-2xl lg:text-5xl font-extrabold">
           About <b className="text-accent">Me.</b>
         </div>
         <div>
-          <p className="text-lg">
+          <p className="text-base lg:text-lg 2xl:text-2xl">
             I thrive on turning ideas into interactive and user-friendly
             experiences. My journey in the world of web development has been an
             exciting adventure of constant learning and creating.
           </p>
-          <p className="text-lg mt-2">
+          <p className="text-lg 2xl:text-2xl mt-2">
             From crafting responsive layouts to implementing state-of-the-art
             features, I enjoy the challenges that come with building modern and
             dynamic web applications
           </p>
         </div>
         <div>
-          <button className="mt-6 px-6 py-2 bg-accent text-white font-bold rounded-lg shadow-lg hover:bg-opacity-80 transition-all">
+          <button className="text-base mt-2 lg:mt-6 px-6 py-2 bg-accent text-white font-bold rounded-lg shadow-lg hover:bg-opacity-80 transition-all">
             Contact me
           </button>
         </div>

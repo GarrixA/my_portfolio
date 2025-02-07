@@ -7,9 +7,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col py-5 gap-6 text-white bg-[#020617] px-[10%] mx-auto">
-      <div className="flex flex-col lg:flex-row justify-between gap-4 lg:gap-6">
-        <div className="flex flex-col items-start justify-center flex-1 gap-3 mt-2">
+    <footer className="flex flex-col py-5 gap-6 text-white bg-[#020617] px-[10%] mx-auto  min-w-72">
+      <div className="flex flex-col lg:flex-row justify-between gap-4 lg:gap-6 ">
+        <div className="flex flex-col items-start justify-center flex-1 gap-3 mt-2 ">
           <div className="w-1/2">
             <Image
               src={Logo}
@@ -19,20 +19,20 @@ const Footer = () => {
               className="w-full object-contain"
             />
           </div>
-          <p className="text-center lg:text-left">
+          <p className="text-left">
             Web designer with a keen eye for aesthetics and user experience.
           </p>
         </div>
 
-        <div className="flex flex-col gap-3 flex-1 mt-8 lg:mt-0">
-          <h1 className="text-center lg:text-left text-xl">
+        <div className="flex flex-col gap-3 flex-1 lg:mt-0">
+          <h1 className="text-left text-base lg:text-xl">
             Subscribe to get more updates on my new articles
           </h1>
-          <form className="flex justify-center gap-2">
+          <form className="flex gap-2 p-2">
             <input
               type="email"
               placeholder="type your email"
-              className="p-2 text-lg italic bg-transparent border border-white text-white"
+              className="py-2 w-full px-1 text-lg italic bg-transparent border border-white text-white"
             />
             <button className="p-2 text-lg italic bg-[#864f59] border-none rounded-lg text-white">
               Subscribe
@@ -40,9 +40,9 @@ const Footer = () => {
           </form>
         </div>
 
-        <div className="flex flex-col items-center justify-center flex-1 gap-4">
-          <h1 className="text-center lg:text-left text-xl">Follow me on</h1>
-          <div className="flex items-center justify-center gap-2 w-full">
+        <div className="flex flex-col items-center lg:justify-center flex-1 gap-4">
+          <h1 className=" w-full text-left text-xl">Follow me on</h1>
+          <div className="flex  gap-2 w-full">
             <Link
               href="http://www.instagram.com/aphrodisgarrix/"
               target="_blank"
@@ -89,11 +89,11 @@ const Footer = () => {
         </div>
 
         {/* Call Me Section */}
-        <div className="flex flex-col items-center gap-3 flex-1">
-          <h1 className="text-center lg:text-left text-xl">
+        <div className="flex flex-col items- gap-2 lg:gap-3 flex-1">
+          <h1 className="text-left text-base lg:text-xl">
             You can directly contact me On
           </h1>
-          <span className="text-center text-lg">+250 789 438 437</span>
+          <span className="text-base lg:text-lg">+250 789 438 437</span>
         </div>
       </div>
 

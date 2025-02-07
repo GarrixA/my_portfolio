@@ -48,7 +48,7 @@ const FaqComponent = () => {
             transition={{ duration: 0.5 }}
             className="overflow-hidden"
           >
-            <div className="mt-4 text-grey_color text-sm leading-relaxed">
+            <div className="mt-4 text-grey_color text-sm leading-relaxed xl:text-base">
               {item.answer}
             </div>
           </motion.div>
