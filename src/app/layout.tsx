@@ -1,12 +1,16 @@
 import "./globals.css";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Head from "next/head";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Aphrodis developer",
   description: "Aphrodis Uwineza",
-  icons: "/code_icon.png",
+  icons: {
+    icon: "/code_icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -16,12 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <meta name="Aphrodis" content={metadata.description || ""} />
-      <link rel="icon" href={String(metadata?.icons)} />
-      <title>{String(metadata.title)}</title>
+      <Head>
+        <meta name="author" content="Aphrodis Uwineza" />
+        <meta property="og:title" content="Aphrodis Developer Portfolio" />
+        <meta
+          property="og:description"
+          content="Aphrodis Uwineza - Web Developer"
+        />
+      </Head>
       <body>
         <Navbar />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
