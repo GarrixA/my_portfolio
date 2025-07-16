@@ -19,7 +19,7 @@ const ContactsPage = () => {
     {
       name: "LinkedIn",
       location: "Aphrodis Uwineza",
-      link: "https://www.linkedin.com/in/aphrodis-uwineza-961079281/",
+      link: "https://www.linkedin.com/in/aphrodis-uwineza/",
     },
   ];
   return (

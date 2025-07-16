@@ -14,6 +14,8 @@ const SkillsComponent = () => {
     { name: "React.js", percent: 90 },
     { name: "Next.js", percent: 90 },
     { name: "Node.js", percent: 70 },
+    { name: "Express.js", percent: 85 },
+    { name: "Nest.js", percent: 79 },
     { name: "Drizzle ORM", percent: 60 },
     { name: "Sequelize ORM", percent: 75 },
     { name: "Git", percent: 97 },
